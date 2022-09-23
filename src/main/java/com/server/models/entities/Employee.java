@@ -14,8 +14,10 @@ public class Employee implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
+    @Column(nullable = false)
     private Long nik;
 
+    @Column(nullable = false)
     private String name;
 
     @Column(columnDefinition = "TEXT")
@@ -25,7 +27,6 @@ public class Employee implements Serializable {
 
     private String gender;
 
-    @Column(columnDefinition = "date")
     private String dateofbirth;
 
     public Employee() {
