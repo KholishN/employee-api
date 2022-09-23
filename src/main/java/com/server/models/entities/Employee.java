@@ -25,7 +25,7 @@ public class Employee implements Serializable {
 
     private String gender;
 
-    @Column(columnDefinition = "datetime")
+    @Column(columnDefinition = "date")
     private String dateofbirth;
 
     public Employee() {
