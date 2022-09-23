@@ -16,33 +16,33 @@ import com.server.services.EmployeeService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/employees")
+    @PostMapping
     public Employee create(@RequestBody Employee employee) {
         return employeeService.save(employee);
     }
 
-    @GetMapping("/employees")
+    @GetMapping
     public Iterable<Employee> findAll() {
         return employeeService.findAll();
     }
 
-    @GetMapping("/employees/{id}")
+    @GetMapping("{id}")
     public Employee findOne(@PathVariable("id") Long id) {
         return employeeService.findOne(id);
     }
 
-    @PatchMapping("/employees/{id}")
+    @PatchMapping("{id}")
     public Employee update(@RequestBody Employee employee) {
         return employeeService.save(employee);
     }
 
-    @DeleteMapping("/employees/{id}")
+    @DeleteMapping("{id}")
     public void removeOne(@PathVariable("id") Long nik) {
         employeeService.removeOne(nik);
 
