@@ -29,16 +29,21 @@ public class Employee implements Serializable {
 
     private String dateofbirth;
 
+    private String agama;
+
     public Employee() {
     }
 
-    public Employee(Long nik, String name, String address, String country, String gender, String dateofbirth) {
+    public Employee(Long nik, String name, String address, String country, String gender, String dateofbirth,
+            String agama) {
         this.nik = nik;
         this.name = name;
         this.address = address;
         this.country = country;
         this.gender = gender;
         this.dateofbirth = dateofbirth;
+        this.agama = agama;
+
     }
 
     public Long getNik() {
@@ -55,6 +60,14 @@ public class Employee implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAgama() {
+        return agama;
+    }
+
+    public void setAgama(String agama) {
+        this.agama = agama;
     }
 
     public String getAddress() {
